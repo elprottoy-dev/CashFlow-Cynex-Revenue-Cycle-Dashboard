@@ -1,1 +1,63 @@
 
+# CashFlow Cynex: Revenue Cycle Dashboard (MySQL + Excel)
+
+CashFlow Cynex is an end-to-end Revenue Cycle Management (RCM) analytics project which turns synthetic healthcare claims data into actionable cash-flow insights using **MySQL** for data modeling and **Excel** for an interactive executive dashboard.
+
+## ✨ Project Highlights
+
+- RCM-focused design: models patients, payers, and claims to mimic a real healthcare revenue cycle environment.
+- Strong SQL: MySQL scripts calculate key RCM KPIs with joins, date logic, and aggregations.
+- Executive-ready visuals: Excel dashboard with KPI cards, slicers, and dynamic charts branded as CashFlow Cynex.
+
+## 🧱 Tech Stack
+
+- Database: MySQL 8
+- Analytics: Excel (PivotTables, charts, conditional formatting)
+- Data: Synthetic healthcare claims, patients, and payers (no real PHI). [web:34][web:26]
+
+## 🩺 RCM KPIs
+
+- Days in A/R – average time to collect on claims. [web:7][web:35]  
+- Denial rate – percentage of claims and billed amounts denied. [web:7][web:13][web:16]  
+- Net collection rate – collections performance after adjustments. [web:7][web:10][web:32]  
+- A/R aging – 0–30, 31–60, 61–90, >90 days. [web:7][web:13][web:35]
+
+## 📁 Repository Structure
+
+{   sql/
+    01_schema_mysql.sql
+    02_sample_data_mysql.sql
+    03_kpi_queries_mysql.sql
+    04_crud_examples_mysql.sql
+
+    data/
+    claims_raw.csv # optional extra synthetic data
+    dim_patient.csv
+    dim_payer.csv
+
+    analytics/
+    CashFlow_Cynex_RCM_Dashboard.xlsx
+
+    assets/
+    cynex_overview.png
+    cynex_payer_view.png
+    cynex_ar_aging.png
+}
+## 🚀 How to Run
+
+1. Run `sql/01_schema_mysql.sql` in MySQL to create the database and tables.
+2. Run `sql/02_sample_data_mysql.sql` to insert synthetic data.
+3. Run `sql/03_kpi_queries_mysql.sql` to create the view and generate KPI result sets.
+4. Export the KPI query results as CSV and link them into `analytics/CashFlow_Cynex_RCM_Dashboard.xlsx`.
+5. Use the dashboard slicers to explore performance by payer and month.
+
+## 🔧 CRUD Operations
+
+The file `sql/04_crud_examples_mysql.sql` demonstrates basic CRUD operations:
+
+- Create new payers, patients, and claims.
+- Read and filter open claims.
+- Update claim payment details and patient info.
+- Delete test records.
+
+This shows both data management and analytics skills with MySQL. [web:113][web:118][web:120][web:129][web:131]
